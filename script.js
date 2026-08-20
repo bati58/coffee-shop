@@ -94,6 +94,8 @@
     });
   });
 
+  document.querySelector('.menu-tab[data-tab="all"]').click();
+
   document.querySelectorAll('[data-menu-tab]').forEach((link) => {
     link.addEventListener('click', () => {
       const matchingTab = document.querySelector(`.menu-tab[data-tab="${link.dataset.menuTab}"]`);
