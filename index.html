@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Buna Bet — Ethiopian Coffee House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Icon sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 18 2c1 2 2 4.5 2 8 0 5.5-4.5 10-9 10z" />
+      <path d="M2 21c0-3 2-6 6-6" />
+    </symbol>
+    <symbol id="icon-flame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.5-.5-2-1-3-1.5 1-2 2.5-2 4 0 2.5 2 4.5 4.5 4.5S17 15.5 17 13c0-2-.5-3.5-2-5.5 1 1.5 1.5 3 1.5 4.5a2.5 2.5 0 0 0 5 0C22 8.5 18 3 12 3S2 8.5 2 13a5 5 0 0 0 5 5c1.5 0 2.5-.5 3.5-1.5" />
+    </symbol>
+    <symbol id="icon-teapot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+      <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+      <line x1="6" y1="1" x2="6" y2="4" />
+      <line x1="10" y1="1" x2="10" y2="4" />
+      <line x1="14" y1="1" x2="14" y2="4" />
+    </symbol>
+    <symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path
+        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </symbol>
+    <symbol id="icon-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </symbol>
+    <symbol id="icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round">
+      <line x1="22" y1="2" x2="11" y2="13" />
+      <polygon points="22 2 15 22 11 13 2 9 22 2" />
+    </symbol>
+    <symbol id="icon-shopping-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 8h12l1 13H5L6 8z" />
+      <path d="M9 8a3 3 0 0 1 6 0" />
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">
+        <img src="assets/logo.svg" alt="" class="logo-mark" width="36" height="36" />
+        <span class="logo-text">Buna Bet</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li class="mobile-nav-close-item">
+          <button class="mobile-nav-close" id="mobile-nav-close" type="button"
+            aria-label="Close navigation menu">&times;</button>
+        </li>
+        <li><a href="#about">About</a></li>
+        <li class="nav-menu-group">
+          <a href="#menu">Menu <span class="nav-caret" aria-hidden="true">+</span></a>
+          <div class="nav-menu-dropdown" aria-label="Menu categories">
+            <a href="#menu" data-menu-tab="coffee">Coffee</a>
+            <a href="#menu" data-menu-tab="breakfast">Breakfast</a>
+            <a href="#menu" data-menu-tab="lunch">Lunch &amp; Dinner</a>
+            <a href="#menu" data-menu-tab="drinks">Drinks</a>
+          </div>
+        </li>
+        <li><a href="#ceremony">Ceremony</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li class="nav-mobile-cta">
+          <a href="#visit" class="btn btn-primary btn-full">Reserve a Table</a>
+        </li>
+      </ul>
+      <button class="cart-trigger" id="cart-trigger" type="button" aria-label="Open order basket"
+        aria-controls="cart-drawer" aria-expanded="false">
+        <svg class="cart-trigger-icon" aria-hidden="true">
+          <use href="#icon-shopping-bag"></use>
+        </svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+      <a href="#visit" class="btn btn-primary nav-cta">Reserve a Table</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="cart-backdrop" id="cart-backdrop" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Your order" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <span class="section-label">Buna Bet</span>
+        <h2>Your order</h2>
+      </div>
+      <button class="cart-close" id="cart-close" type="button" aria-label="Close order basket">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p class="cart-empty">Your basket is waiting for something delicious.</p>
+    </div>
+    <div class="cart-summary">
+      <div class="cart-total"><span>Total</span><strong id="cart-total">0 ETB</strong></div>
+      <form class="order-form" id="order-form">
+        <label for="order-name">Name</label>
+        <input id="order-name" name="orderName" type="text" placeholder="Your name" required />
+        <label for="order-phone">Phone</label>
+        <input id="order-phone" name="orderPhone" type="tel" placeholder="+251 ..." required />
+        <label for="order-notes">Order notes</label>
+        <textarea id="order-notes" name="orderNotes" rows="2" placeholder="Pickup time or dietary needs"></textarea>
+        <button class="btn btn-primary btn-full" type="submit">Place Order</button>
+        <p class="form-note" id="order-message" aria-live="polite"></p>
+      </form>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg">
+        <img src="assets/images/coffee hero.jpg" alt="Freshly brewed coffee in a warm Ethiopian coffee house"
+          class="hero-bg-img" />
+      </div>
+      <div class="hero-content container">
+        <p class="hero-tag">Addis Ababa · Since 2018</p>
+        <h1>Where every cup tells a <em>story</em></h1>
+        <p class="hero-desc">
+          Experience authentic Ethiopian coffee — hand-roasted, traditionally brewed,
+          and served with the warmth of home.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">Explore Menu</a>
+          <a href="#visit" class="btn btn-outline">Reserve a Table</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="container about-grid">
+        <div class="about-image">
+          <div class="about-image-frame">
+            <img src="assets/images/about.jpg" alt="Freshly roasted Ethiopian coffee beans" class="about-img"
+              width="640" height="800" />
+          </div>
+          <div class="about-badge">
+            <span class="badge-number">100%</span>
+            <span class="badge-label">Single Origin</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-label">Our Story</span>
+          <h2>Rooted in tradition, brewed with care</h2>
+          <p>
+            Ethiopia is the birthplace of coffee. At Buna Bet, we honor that legacy
+            by sourcing beans directly from Yirgacheffe, Sidamo, and Harrar — regions
+            celebrated for their distinct floral and fruity profiles.
+          </p>
+          <p>
+            Every batch is roasted in small quantities to preserve the delicate
+            character that makes Ethiopian coffee unlike anything else in the world.
+          </p>
+          <ul class="about-features">
+            <li>
+              <span class="feature-icon" aria-hidden="true">
+                <svg class="icon">
+                  <use href="#icon-leaf"></use>
+                </svg>
+              </span>
+              <div>
+                <strong>Ethically Sourced</strong>
+                <span>Direct trade with smallholder farmers</span>
+              </div>
+            </li>
+            <li>
+              <span class="feature-icon" aria-hidden="true">
+                <svg class="icon">
+                  <use href="#icon-flame"></use>
+                </svg>
+              </span>
+              <div>
+                <strong>Fresh Roasted</strong>
+                <span>Roasted weekly on-site</span>
+              </div>
+            </li>
+            <li>
+              <span class="feature-icon" aria-hidden="true">
+                <svg class="icon">
+                  <use href="#icon-teapot"></use>
+                </svg>
+              </span>
+              <div>
+                <strong>Traditional Brew</strong>
+                <span>Jebena &amp; pour-over methods</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Our Menu</span>
+          <h2>Crafted for every moment</h2>
+          <p>From bold espresso to gentle pour-overs — discover your perfect cup.</p>
+        </div>
+
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="menu-tab active" type="button" role="tab" aria-selected="true" aria-controls="menu-coffee"
+            data-tab="coffee">Coffee</button>
+          <button class="menu-tab" type="button" role="tab" aria-selected="false" aria-controls="menu-breakfast"
+            data-tab="breakfast">Breakfast</button>
+          <button class="menu-tab" type="button" role="tab" aria-selected="false" aria-controls="menu-lunch"
+            data-tab="lunch">Lunch &amp; Dinner</button>
+          <button class="menu-tab" type="button" role="tab" aria-selected="false" aria-controls="menu-drinks"
+            data-tab="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menu-coffee">
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                alt="Traditional Ethiopian coffee being served" width="600" height="400" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Traditional Buna</h3>
+                <span class="price">45 ETB</span>
+              </div>
+              <p>Classic Ethiopian coffee brewed in a clay jebena, served with tenadam.</p>
+              <span class="menu-tag">Signature</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                alt="Pour-over coffee" width="600" height="400" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Yirgacheffe Pour-Over</h3>
+                <span class="price">55 ETB</span>
+              </div>
+              <p>Bright, floral notes with hints of bergamot and jasmine.</p>
+              <span class="menu-tag">Single Origin</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                alt="Espresso shot" width="600" height="400" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Sidamo Espresso</h3>
+                <span class="price">40 ETB</span>
+              </div>
+              <p>Rich, wine-like body with dark chocolate undertones.</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                alt="Macchiato with latte art" width="600" height="400" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Macchiato</h3>
+                <span class="price">35 ETB</span>
+              </div>
+              <p>Ethiopian espresso marked with a touch of steamed milk.</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                alt="Cold brew coffee" width="600" height="400" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Harrar Cold Brew</h3>
+                <span class="price">50 ETB</span>
+              </div>
+              <p>Smooth, fruity cold brew with blueberry notes. 12-hour steep.</p>
+              <span class="menu-tag">Seasonal</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img src="assets/images/coffee-spiced.jpg" alt="Spiced coffee with cinnamon" width="600" height="400" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Spiced Buna</h3>
+                <span class="price">50 ETB</span>
+              </div>
+              <p>Traditional coffee with cardamom, cinnamon, and clove.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="menu-grid hidden" id="menu-breakfast" role="tabpanel">
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                alt="Fresh breakfast bowl with vegetables and grains" width="600" height="400" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Garden Breakfast Bowl</h3>
+                <span class="price">95 ETB</span>
+              </div>
+              <p>A colorful bowl of fresh vegetables, grains, and seasoned bites to start the day well.</p>
+              <span class="menu-tag">Breakfast</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                alt="Savory flatbread with herbs and roasted toppings" width="600" height="400" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Berbere Savory Flatbread</h3>
+                <span class="price">85 ETB</span>
+              </div>
+              <p>Oven-baked flatbread with warm berbere spice, roasted toppings, herbs, and a soft center.</p>
+              <span class="menu-tag">Popular</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img src="assets/images/bread.jpg" alt="Fresh rustic bread basket" width="600" height="400" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Morning Bread Basket</h3>
+                <span class="price">65 ETB</span>
+              </div>
+              <p>Fresh rustic loaves served warm with butter, honey, and house jam.</p>
+              <span class="menu-tag">Until 11 AM</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="menu-grid hidden" id="menu-lunch" role="tabpanel">
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                alt="Crisp sambusa with savory filling and herbs" width="600" height="400" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Sambusa Plate</h3>
+                <span class="price">180 ETB</span>
+              </div>
+              <p>Golden pastry parcels filled with spiced lentils and vegetables, served with fresh herbs.</p>
+              <span class="menu-tag">Popular</span>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img src="assets/images/bread.jpg" alt="Rustic freshly baked bread basket" width="600" height="400" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Fresh Bread Basket</h3>
+                <span class="price">45 ETB</span>
+              </div>
+              <p>Warm, rustic loaves with a crisp crust and tender crumb, perfect for sharing.</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img src="assets/images/food2.jpg" alt="Savory flatbread topped with chicken and herbs" width="600"
+                height="400" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>House Savory Flatbread</h3>
+                <span class="price">35 ETB</span>
+              </div>
+              <p>Oven-baked flatbread layered with tender chicken, herbs, and a light savory sauce.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="menu-grid hidden" id="menu-drinks">
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                alt="Golden honey wine in glass" width="600" height="400" loading="lazy" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Tej Honey Wine</h3>
+                <span class="price">70 ETB</span>
+              </div>
+              <p>Traditional Ethiopian honey wine — sweet, golden, and aromatic.</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img src="assets/images/avocado.jpg" alt="Fresh mango juice with mango pieces" width="600" height="400" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Fresh Mango Juice</h3>
+                <span class="price">45 ETB</span>
+              </div>
+              <p>Bright mango blended with ice and a touch of lime for a naturally sweet refreshment.</p>
+            </div>
+          </article>
+          <article class="menu-card">
+            <div class="menu-card-image">
+              <img src="assets/images/mango.jpg" alt="Mixed berry smoothie topped with fresh berries" width="600"
+                height="400" />
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3>Mixed Berry Smoothie</h3>
+                <span class="price">50 ETB</span>
+              </div>
+              <p>Cool, creamy berries blended smooth and finished with fresh strawberry and blueberry.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ceremony" class="ceremony section">
+      <div class="ceremony-bg">
+        <img src="assets/images/ceremony.jpg" alt="" class="ceremony-bg-img" />
+      </div>
+      <div class="container ceremony-content">
+        <span class="section-label light">The Experience</span>
+        <h2>The Ethiopian Coffee Ceremony</h2>
+        <p class="ceremony-intro">
+          More than a drink — a ritual of community, patience, and hospitality
+          that has been practiced for centuries.
+        </p>
+        <div class="ceremony-steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Roasting</h3>
+            <p>Green beans are roasted over charcoal until they crack and release their aroma.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Grinding</h3>
+            <p>Freshly roasted beans are ground by hand with a mukecha and zenezena.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Brewing</h3>
+            <p>Ground coffee simmers in a clay jebena, poured in three rounds — abol, tona, baraka.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3>Sharing</h3>
+            <p>Served with popcorn, roasted barley, and incense — a moment to connect.</p>
+          </div>
+        </div>
+        <a href="#visit" class="btn btn-light">Book a Ceremony</a>
+      </div>
+    </section>
+
+    <section class="testimonials section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Testimonials</span>
+          <h2>What our guests say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial">
+            <p>"The coffee ceremony here transported me back to my grandmother's home in Gondar. Absolutely authentic."
+            </p>
+            <footer>
+              <strong>Sara T.</strong>
+              <span>Regular Guest</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"Best Yirgacheffe I've had outside of Ethiopia. The atmosphere is warm, the staff knows their craft."</p>
+            <footer>
+              <strong>James M.</strong>
+              <span>Coffee Enthusiast</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <p>"A hidden gem. The injera platter paired with traditional buna is the perfect Sunday morning ritual."</p>
+            <footer>
+              <strong>Hanna B.</strong>
+              <span>Food Blogger</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" class="visit section">
+      <div class="container visit-grid">
+        <div class="visit-info">
+          <span class="section-label">Visit Us</span>
+          <h2>Come sit with us</h2>
+          <p>We'd love to share a cup. Walk-ins welcome — reservations recommended for ceremonies.</p>
+
+          <div class="info-items">
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">
+                <svg class="icon">
+                  <use href="#icon-map-pin"></use>
+                </svg>
+              </span>
+              <div>
+                <strong>Location</strong>
+                <span>Bole Road, Near Atlas Hotel<br />Addis Ababa, Ethiopia</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">
+                <svg class="icon">
+                  <use href="#icon-clock"></use>
+                </svg>
+              </span>
+              <div>
+                <strong>Hours</strong>
+                <span>Mon – Fri: 7:00 AM – 9:00 PM<br />Sat – Sun: 8:00 AM – 10:00 PM</span>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon" aria-hidden="true">
+                <svg class="icon">
+                  <use href="#icon-phone"></use>
+                </svg>
+              </span>
+              <div>
+                <strong>Contact</strong>
+                <span>+251 911 234 567<br />hello@bunabet.et</span>
+              </div>
+            </div>
+          </div>
+          <div class="visit-actions">
+            <a class="visit-action" href="tel:+251911234567">Call to order</a>
+            <a class="visit-action" href="mailto:hello@bunabet.et">Email us</a>
+          </div>
+          <div class="visit-map">
+            <div class="visit-map-header">
+              <div>
+                <span class="section-label">Find us</span>
+                <strong>Bole Atlas, Addis Ababa</strong>
+              </div>
+              <a href="https://www.google.com/maps/place/Bole+Atlas/@9.0036861,38.7622177,15z/data=!3m1!4b1!4m6!3m5!1s0x164b850060b60221:0xe8b191669975e7b5!8m2!3d9.0036654!4d38.7806718!16s%2Fg%2F11yx6cf86_?entry=ttu&amp;g_ep=EgoyMDI2MDgxNy4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" rel="noopener noreferrer">Get directions</a>
+            </div>
+            <iframe class="visit-map-frame"
+              src="https://www.google.com/maps?q=9.0036654,38.7806718&amp;z=15&amp;output=embed"
+              title="Map showing Bole Atlas in Addis Ababa" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <form class="reservation-form" id="reservation-form">
+          <h3>Reserve, order, or ask us</h3>
+          <p class="form-intro">Choose what you need and we will get back to you shortly.</p>
+          <div class="form-group">
+            <label for="request-type">How can we help?</label>
+            <select id="request-type" name="requestType">
+              <option value="reservation">Reserve a table</option>
+              <option value="pickup">Place a pickup order</option>
+              <option value="contact">General contact</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+251 ..." required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="time">Time</label>
+              <input type="time" id="time" name="time" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="purpose">Plan</label>
+            <select id="purpose" name="purpose">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+              <option value="ceremony">Coffee &amp; Ceremony</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests">
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5+ guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="notes">Special Requests</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Coffee ceremony, dietary needs..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Confirm Reservation</button>
+          <p class="form-note" id="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <img src="assets/logo.svg" alt="" class="logo-mark" width="36" height="36" />
+          <span class="logo-text">Buna Bet</span>
+        </a>
+        <p>Authentic Ethiopian coffee, served with heart.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#ceremony">Ceremony</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul class="social-links">
+          <li>
+            <a href="#">
+              <svg class="icon icon-sm">
+                <use href="#icon-instagram"></use>
+              </svg>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg class="icon icon-sm">
+                <use href="#icon-facebook"></use>
+              </svg>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg class="icon icon-sm">
+                <use href="#icon-send"></use>
+              </svg>
+              Telegram
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Buna Bet Coffee House. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
