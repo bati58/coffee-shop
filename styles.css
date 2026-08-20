@@ -926,6 +926,10 @@ h3 {
   gap: 1.5rem;
 }
 
+.menu-grid:not(:first-of-type) {
+  margin-top: 1.5rem;
+}
+
 .menu-grid.hidden {
   display: none;
 }

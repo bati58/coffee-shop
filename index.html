@@ -52,7 +52,7 @@
     </symbol>
     <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"
       stroke-linecap="round" stroke-linejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" />
+        <div class="menu-grid" id="menu-breakfast" role="tabpanel">
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
     </symbol>
@@ -86,7 +86,7 @@
         <li><a href="#about">About</a></li>
         <li class="nav-menu-group">
           <a href="#menu">Menu <span class="nav-caret" aria-hidden="true">+</span></a>
-          <div class="nav-menu-dropdown" aria-label="Menu categories">
+        <div class="menu-grid" id="menu-lunch" role="tabpanel">
             <a href="#menu" data-menu-tab="coffee">Coffee</a>
             <a href="#menu" data-menu-tab="breakfast">Breakfast</a>
             <a href="#menu" data-menu-tab="lunch">Lunch &amp; Dinner</a>
@@ -105,7 +105,7 @@
           <use href="#icon-shopping-bag"></use>
         </svg>
         <span class="cart-count" id="cart-count">0</span>
-      </button>
+        <div class="menu-grid" id="menu-drinks">
       <a href="#visit" class="btn btn-primary nav-cta">Reserve a Table</a>
       <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -232,7 +232,9 @@
         </div>
 
         <div class="menu-tabs" role="tablist" aria-label="Menu categories">
-          <button class="menu-tab active" type="button" role="tab" aria-selected="true" aria-controls="menu-coffee"
+          <button class="menu-tab active" type="button" role="tab" aria-selected="true" aria-controls="menu-all"
+            data-tab="all">All</button>
+          <button class="menu-tab" type="button" role="tab" aria-selected="false" aria-controls="menu-coffee"
             data-tab="coffee">Coffee</button>
           <button class="menu-tab" type="button" role="tab" aria-selected="false" aria-controls="menu-breakfast"
             data-tab="breakfast">Breakfast</button>

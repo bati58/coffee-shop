@@ -69,6 +69,7 @@
 
   // Menu tabs
   const tabs = document.querySelectorAll('.menu-tab');
+  const menuGrids = document.querySelectorAll('.menu-grid');
   const panels = {
     coffee: document.getElementById('menu-coffee'),
     breakfast: document.getElementById('menu-breakfast'),
@@ -84,8 +85,12 @@
       tab.classList.add('active');
       tabs.forEach((t) => t.setAttribute('aria-selected', t === tab ? 'true' : 'false'));
 
-      Object.values(panels).forEach((panel) => panel.classList.add('hidden'));
-      panels[target].classList.remove('hidden');
+      menuGrids.forEach((grid) => grid.classList.add('hidden'));
+      if (target === 'all') {
+        menuGrids.forEach((grid) => grid.classList.remove('hidden'));
+      } else if (panels[target]) {
+        panels[target].classList.remove('hidden');
+      }
     });
   });
 
