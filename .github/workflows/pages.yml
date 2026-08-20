@@ -1,0 +1,49 @@
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy_pages.outputs.page_url || steps.deploy_pages_retry.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy_pages
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Deploy to GitHub Pages (retry)
+        if: ${{ steps.deploy_pages.outcome == 'failure' }}
+        id: deploy_pages_retry
+        uses: actions/deploy-pages@v4
+
+      - name: Fail if deployment failed after retry
+        if: ${{ steps.deploy_pages.outcome == 'failure' && steps.deploy_pages_retry.outcome == 'failure' }}
+        run: |
+          echo "GitHub Pages deployment failed twice."
+          exit 1
